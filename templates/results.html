@@ -63,7 +63,8 @@
               <strong>
               Поисковый запрос:
                 </strong>
-              {{data['request_text']}}
+              {{data['name']}}
+              {{data['area']}}
             </ul>
             <ul>
               <strong>
@@ -81,7 +82,7 @@
             <table class="table">
               <tr>
                   <th>Востребованные навыки</th>
-                  <th>Количество</th>
+                  <th>В скольких вакансиях требуются</th>
               </tr>
               {% for item in data['key_skills'] %}
                 <tr>
