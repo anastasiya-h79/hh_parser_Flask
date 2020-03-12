@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 from m import parser
+from alchemy_parser import  parser_alchemy
 
 app = Flask(__name__)
 
@@ -24,16 +25,18 @@ def request_get():
 def request_post():
     name = request.form['vacancy']
     area = request.form['area']
-    request_result = parser(name, area)
+    request_result = parser_alchemy(name, area)
     return render_template('results.html', data=request_result)
 
 
 # @app.route('/results/', methods=['POST'])
 # def results():
-#     with open('request_result.json', "r", encoding="utf-8") as f:
-#         data = json.load(f)
-#     # print(data)
-#     return render_template('results.html', data=data)
+
+
+    # with open('request_result.json', "r", encoding="utf-8") as f:
+    #     data = json.load(f)
+    # # print(data)
+    # return render_template('results.html', data=data)
 
 
 if __name__ == "__main__":
