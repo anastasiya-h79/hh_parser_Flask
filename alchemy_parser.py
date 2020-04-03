@@ -83,8 +83,8 @@ def parser_alchemy(name, area):
     pages = result['pages']
 
 
-    area = Region(params.values[1])
-    if session.query(Region).filter(Region.name == params.values[1]).count() == 0: session.add(params.values[1])
+    area = Region(area)          #area = Region(params.values()[1])
+    if session.query(Region).filter(Region.name == area).count() == 0: session.add(area)  #params.values[1] вместо area
     session.commit()
 
 
