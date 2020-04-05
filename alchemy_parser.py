@@ -32,11 +32,9 @@ def parser_alchemy(name, area):
         __tablename__ = 'region'
         id = Column(Integer, primary_key=True)
         name = Column(String)
-        #number = Column(Integer, nullable=True)
 
         def __init__(self, name):
             self.name = name
-            #self.number = number
 
         # def __str__(self):
         #     return f'{self.id}) {self.name}: {self.number}'
