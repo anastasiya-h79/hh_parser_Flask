@@ -63,20 +63,20 @@
               <strong>
               Поисковый запрос:
                 </strong>
-              {{data['name']}}
-              {{data['area']}}
+              {{request_result['name']}}
+              {{request_result['area']}}
             </ul>
             <ul>
               <strong>
               Количество вакансий:
                 </strong>
-              {{data['found']}}
+              {{request_result['found']}}
             </ul>
             <ul>
               <strong>
               Средняя зарплата, руб.:
                 </strong>
-              {{data['list_salary_mean']}}
+              {{request_result['list_salary_mean']}}
             </ul>
 
             <table class="table">
@@ -84,7 +84,7 @@
                   <th>Востребованные навыки</th>
                   <th>В скольких вакансиях требуются</th>
               </tr>
-              {% for item in data['key_skills'] %}
+              {% for item in request_result['key_skills'] %}
                 <tr>
                     <td>{{item[0]}}</td>
                     <td>{{item[1]}}</td>
