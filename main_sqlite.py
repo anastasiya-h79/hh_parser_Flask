@@ -27,12 +27,12 @@ cursor.execute("insert into vacancykey_skills (vacancy_id, key_skills_id) VALUES
 #cursor.execute('SELECT * from vacancykey_skills')
 
 # print(cursor.fetchall())
-#
+
 query = 'select vk.id, v.name, k.name, r.name from vacancy v, ' \
         'key_skills k, vacancykey_skills vk, region r where vk.vacancy_id = v.id' \
         ' and vk.key_skills_id = k.id and v.region_id = r.id'
-#
-# # Вывести в нормальном виде таблицу скилы + вакансии
+
+# Вывести в нормальном виде таблицу скилы + вакансии
 cursor.execute(query)
 
 print(cursor.fetchall())
